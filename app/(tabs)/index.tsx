@@ -1,12 +1,19 @@
 import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { Button, Platform, StyleSheet } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import React, { useState } from 'react';
+import { getuser } from '../services/api.service';
 
 export default function HomeScreen() {
+  const user = getuser();
+  const [count, setCount] = useState(0);
+  function handleClick() {
+    setCount(count+1)
+  }
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
@@ -17,8 +24,14 @@ export default function HomeScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+        <ThemedText type="title">hello! {count}</ThemedText>
         <HelloWave />
+        <Button
+  onPress={handleClick}
+  title="Learn More"
+  color="#841584"
+  accessibilityLabel="Learn more about this purple button"
+/>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
