@@ -34,7 +34,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="HELLO"
         options={{
           title: 'Explore',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
@@ -42,7 +42,7 @@ export default function TabLayout() {
       />
 
       <Tabs.Screen
-        name="paintracker"
+        name="HELLLOOO"
         options={{
           title: 'Pain Tracker',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="checklist" color={color} />,
