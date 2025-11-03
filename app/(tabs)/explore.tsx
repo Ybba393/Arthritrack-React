@@ -76,7 +76,7 @@ export default function TabTwoScreen() {
           <ThemedText type="link">Learn more</ThemedText>
         </ExternalLink>
       </Collapsible>
-      <Collapsible title="Animations">
+      <Collapsible title="AnimationsNEW">
         <ThemedText>
           This template includes an example of an animated component. The{' '}
           <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   headerImage: {
     color: '#808080',
     bottom: -90,
-    left: -35,
+    left: -90,
     position: 'absolute',
   },
   titleContainer: {
